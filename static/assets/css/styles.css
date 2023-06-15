@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.user-add-form input, .user-add-form textarea{
+    width: 60%;
+}
+
+.add-user-btn{
+    width: 8rem;
+    margin-left: 8rem!important;
+    height: 2rem;
+    border-radius: 5rem;
+    border: none;
+    background: #1789f3;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.8);
+    font-size: 12px;
+    transition: .5s;
+}
+
+.add-user-btn:active{
+    transform: scale(.7);
+}
