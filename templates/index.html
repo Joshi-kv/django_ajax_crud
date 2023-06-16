@@ -17,10 +17,9 @@
                         <textarea name="address"  rows="5" class="form-control" placeholder="Enter address"></textarea>
                     </div>
                     <div class="form-group my-4">
-                        <input type="text" name="age" placeholder="Enter age" class="form-control">
-                        <div class="my-4 valid-tooltip">
-                            Please Enter a valid age
+                        <div id="age-error" class="my-2 text-danger">
                         </div>
+                        <input type="text" name="age" placeholder="Enter age" class="form-control">
                     </div>
                     <button class="mx-5 add-user-btn" type="submit">Add User</button>
                 </form>
@@ -28,25 +27,25 @@
             <div class="col-lg-6">
                 <h5 class="mt-5">Users List</h5>
                 {% if users %}
-                <table class="table">
+                <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Address</th>
-                            <th>Age</th>
-                            <th >Actions</th>
+                            <th class="text-center">Name</th>
+                            <th class="text-center">Address</th>
+                            <th class="text-center">Age</th>
+                            <th class="text-center">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         {% for user in users %}
                         <tr>
-                            <td>{{user.name}}</td>
-                            <td>{{user.address}}</td>
-                            <td>{{user.age}}</td>
-                            <td class="mx-1"><button class="btn btn-danger">Delete</button></td>
-                            <td><button class="btn btn-success">Edit</button></td>
+                            <td class="text-center">{{user.name}}</td>
+                            <td class="text-center">{{user.address}}</td>
+                            <td class='text-center'>{{user.age}}</td>
+                            <td class="mx-1 text-center"><button class="btn btn-danger">Delete</button></td>
+                            <td class="text-center"><button class="btn btn-success">Edit</button></td>
                         </tr>
-                        {% endfor %}
+                        {% endfor %} 
                     </tbody>
                 </table>
                 {% else %}
@@ -57,6 +56,7 @@
         </div>
     </section>
 </main>    
+
 
 {% endblock content %}
 
